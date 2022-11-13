@@ -1,0 +1,38 @@
+name: Build documentation
+
+on:
+  repository_dispatch:
+    types: [build-doc]
+
+jobs:
+  build-doc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 
+        uses: actions/checkout@v2
+        
+      - name: Checkout Interruptor
+        uses: actions/checkout@v2
+        with:
+          repository: frenchyeti/interruptor
+          path: interruptor
+          
+      - name: Cleanup output
+        run: 'rm -rf $GITHUB_WORKSPACE/public  && git pull'
+        
+      - name: Build
+        uses: andstor/jsdoc-action@v1
+        with:
+          source_dir: ./interruptor/src
+          output_dir: ./public
+          config_file: ./conf/config.jsdoc.json
+          recurse: true,
+          front_page: README.md
+          
+      - name: Cleanup interruptor
+        run: 'rm -rf $GITHUB_WORKSPACE/interruptor'
+        
+      - name: Update repository
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update doc
