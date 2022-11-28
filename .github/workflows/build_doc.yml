@@ -22,7 +22,7 @@ jobs:
         run: 'rm -rf $GITHUB_WORKSPACE/public  && git pull'
         
       - name: Install TypeDoc
-        run: 'npm install typedoc'
+        run: 'npm install -g typedoc'
         
       - name: Build
         run: 'typedoc --name interruptor --out $GITHUB_WORKSPACE/public --entryPointStrategy packages .'
