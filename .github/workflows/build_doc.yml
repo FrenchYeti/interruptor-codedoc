@@ -25,7 +25,7 @@ jobs:
         run: 'npm install -g typedoc'
         
       - name: Build
-        run: 'cd $GITHUB_WORKSPACE/interruptor && npm install && typedoc --name interruptor --out $GITHUB_WORKSPACE/public --entryPointStrategy package .'
+        run: 'cd $GITHUB_WORKSPACE/interruptor && npm install && typedoc --name interruptor --out $GITHUB_WORKSPACE/public --entryPointStrategy packages .'
           
       - name: Cleanup interruptor
         run: 'rm -rf $GITHUB_WORKSPACE/interruptor'
