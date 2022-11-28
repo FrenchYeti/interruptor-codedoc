@@ -1,4 +1,4 @@
-name: Build documentation
+name: BuildDocumentation
 
 on:
   workflow_dispatch:
@@ -25,8 +25,7 @@ jobs:
         run: 'npm install -g typedoc'
         
       - name: Build
-        run: 'cd $GITHUB_WORKSPACE/interruptor && npm install && typedoc  --name Interruptor --out $GITHUB_WORKSPACE/public --entryPoint ./index.linux.aarch32.ts --entryPoint ./index.linux.arm64.ts --entryPoint ./index.linux.x64.ts --entryPointStrategy expand ./src 
-
+        run: 'cd $GITHUB_WORKSPACE/interruptor && npm install && typedoc  --name Interruptor --out $GITHUB_WORKSPACE/public --entryPoint ./index.linux.aarch32.ts --entryPoint ./index.linux.arm64.ts --entryPoint ./index.linux.x64.ts --entryPointStrategy expand ./src' 
           
       - name: Cleanup interruptor
         run: 'rm -rf $GITHUB_WORKSPACE/interruptor'
