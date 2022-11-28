@@ -21,14 +21,11 @@ jobs:
       - name: Cleanup output
         run: 'rm -rf $GITHUB_WORKSPACE/public  && git pull'
         
+      - name: Install TypeDoc
+        run: 'npm install typedoc'
+        
       - name: Build
-        uses: andstor/jsdoc-action@v1
-        with:
-          source_dir: ./interruptor/src
-          output_dir: ./public
-          config_file: ./conf/config.jsdoc.json
-          recurse: true,
-          front_page: README.md
+        run: 'typedoc --name interruptor --out $GITHUB_WORKSPACE/public --entryPointStrategy packages .'
           
       - name: Cleanup interruptor
         run: 'rm -rf $GITHUB_WORKSPACE/interruptor'
