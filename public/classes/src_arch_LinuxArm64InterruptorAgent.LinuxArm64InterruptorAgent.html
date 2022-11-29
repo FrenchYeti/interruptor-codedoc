@@ -16,6 +16,10 @@
 <li><a href="../modules/src_arch_LinuxArm64InterruptorAgent.html">src/arch/LinuxArm64InterruptorAgent</a></li>
 <li><a href="src_arch_LinuxArm64InterruptorAgent.LinuxArm64InterruptorAgent.html">LinuxArm64InterruptorAgent</a></li></ul>
 <h1>Class LinuxArm64InterruptorAgent</h1></div>
+<section class="tsd-panel tsd-comment">
+<div class="tsd-comment tsd-typography"><p>This class is the main part of tracing and parsing part. It provides every parts
+very specific to an architecture, an OS, ...</p>
+</div></section>
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
 <ul class="tsd-hierarchy">
@@ -27,7 +31,7 @@
 <ul class="tsd-hierarchy">
 <li><a href="../interfaces/src_utilities_IStringIndex.IStringIndex.html" class="tsd-signature-type" data-tsd-kind="Interface">IStringIndex</a></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L65">src/arch/LinuxArm64InterruptorAgent.ts:65</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L94">src/arch/LinuxArm64InterruptorAgent.ts:94</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -41,6 +45,7 @@
 <h3 class="tsd-index-heading">Properties</h3>
 <div class="tsd-index-list"><a href="src_arch_LinuxArm64InterruptorAgent.LinuxArm64InterruptorAgent.html#_do_ft" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF984D" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-1024-path"></rect><path d="M9.354 16V7.24H12.174C12.99 7.24 13.638 7.476 14.118 7.948C14.606 8.412 14.85 9.036 14.85 9.82C14.85 10.604 14.606 11.232 14.118 11.704C13.638 12.168 12.99 12.4 12.174 12.4H10.434V16H9.354ZM10.434 11.428H12.174C12.646 11.428 13.022 11.284 13.302 10.996C13.59 10.7 13.734 10.308 13.734 9.82C13.734 9.324 13.59 8.932 13.302 8.644C13.022 8.356 12.646 8.212 12.174 8.212H10.434V11.428Z" fill="var(--color-text)" id="icon-1024-text"></path></svg><span>_do_<wbr/>ft</span></a>
 <a href="src_arch_LinuxArm64InterruptorAgent.LinuxArm64InterruptorAgent.html#_tids" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>_tids</span></a>
+<a href="src_arch_LinuxArm64InterruptorAgent.LinuxArm64InterruptorAgent.html#catchBRKPT" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>catchBRKPT</span></a>
 <a href="src_arch_LinuxArm64InterruptorAgent.LinuxArm64InterruptorAgent.html#coverage" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>coverage?</span></a>
 <a href="src_arch_LinuxArm64InterruptorAgent.LinuxArm64InterruptorAgent.html#debug" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>debug</span></a>
 <a href="src_arch_LinuxArm64InterruptorAgent.LinuxArm64InterruptorAgent.html#emulator" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>emulator</span></a>
@@ -101,7 +106,7 @@
 <section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class"><a id="constructor" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>constructor</span><a href="#constructor" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" id="icon-anchor-a"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" id="icon-anchor-b"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" id="icon-anchor-c"></path></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-<li class="tsd-signature tsd-anchor-link" id="constructor.new_LinuxArm64InterruptorAgent">new <wbr/>Linux<wbr/>Arm64<wbr/>Interruptor<wbr/>Agent<span class="tsd-signature-symbol">(</span>pConfig<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, pDoFollowThread<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, pInterrupts<span class="tsd-signature-symbol">: </span><a href="../interfaces/src_common_InterruptorAgent.InterruptSignatureMap.html" class="tsd-signature-type" data-tsd-kind="Interface">InterruptSignatureMap</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="src_arch_LinuxArm64InterruptorAgent.LinuxArm64InterruptorAgent.html" class="tsd-signature-type" data-tsd-kind="Class">LinuxArm64InterruptorAgent</a><a href="#constructor.new_LinuxArm64InterruptorAgent" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="constructor.new_LinuxArm64InterruptorAgent">new <wbr/>Linux<wbr/>Arm64<wbr/>Interruptor<wbr/>Agent<span class="tsd-signature-symbol">(</span>pConfig<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, pDoFollowThread<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, pInterrupts<span class="tsd-signature-symbol">: </span><a href="../interfaces/src_common_Types.InterruptSignatureMap.html" class="tsd-signature-type" data-tsd-kind="Interface">InterruptSignatureMap</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="src_arch_LinuxArm64InterruptorAgent.LinuxArm64InterruptorAgent.html" class="tsd-signature-type" data-tsd-kind="Class">LinuxArm64InterruptorAgent</a><a href="#constructor.new_LinuxArm64InterruptorAgent" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -111,11 +116,11 @@
 <li>
 <h5>pDoFollowThread: <span class="tsd-signature-type">any</span></h5></li>
 <li>
-<h5>pInterrupts: <a href="../interfaces/src_common_InterruptorAgent.InterruptSignatureMap.html" class="tsd-signature-type" data-tsd-kind="Interface">InterruptSignatureMap</a></h5></li></ul></div>
+<h5>pInterrupts: <a href="../interfaces/src_common_Types.InterruptSignatureMap.html" class="tsd-signature-type" data-tsd-kind="Interface">InterruptSignatureMap</a></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="src_arch_LinuxArm64InterruptorAgent.LinuxArm64InterruptorAgent.html" class="tsd-signature-type" data-tsd-kind="Class">LinuxArm64InterruptorAgent</a></h4><aside class="tsd-sources">
 <p>Overrides <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#constructor">constructor</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L77">src/arch/LinuxArm64InterruptorAgent.ts:77</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L107">src/arch/LinuxArm64InterruptorAgent.ts:107</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="_do_ft" class="tsd-anchor"></a>
@@ -123,104 +128,110 @@
 <div class="tsd-signature">_do_<wbr/>ft<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = null</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#_do_ft">_do_ft</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L128">src/common/InterruptorAgent.ts:128</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L124">src/common/InterruptorAgent.ts:124</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="_tids" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>_tids</span><a href="#_tids" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">_tids<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#_tids">_tids</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L51">src/common/InterruptorAgent.ts:51</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L45">src/common/InterruptorAgent.ts:45</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="catchBRKPT" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>catchBRKPT</span><a href="#catchBRKPT" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
+<div class="tsd-signature">catchBRKPT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div><aside class="tsd-sources">
+<p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#catchBRKPT">catchBRKPT</a></p>
+<ul>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L52">src/common/InterruptorAgent.ts:52</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="coverage" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>coverage</span><a href="#coverage" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">coverage<span class="tsd-signature-symbol">?:</span> <a href="src_utilities_Coverage.CoverageAgent.html" class="tsd-signature-type" data-tsd-kind="Class">CoverageAgent</a></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#coverage">coverage</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L78">src/common/InterruptorAgent.ts:78</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L74">src/common/InterruptorAgent.ts:74</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="debug" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>debug</span><a href="#debug" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">debug<span class="tsd-signature-symbol">:</span> <a href="../interfaces/src_common_InterruptorAgent.DebugOptions.html" class="tsd-signature-type" data-tsd-kind="Interface">DebugOptions</a><span class="tsd-signature-symbol"> = ...</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#debug">debug</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L90">src/common/InterruptorAgent.ts:90</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L86">src/common/InterruptorAgent.ts:86</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="emulator" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>emulator</span><a href="#emulator" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">emulator<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#emulator">emulator</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L72">src/common/InterruptorAgent.ts:72</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L68">src/common/InterruptorAgent.ts:68</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="exclude" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>exclude</span><a href="#exclude" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">exclude<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = null</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#exclude">exclude</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L80">src/common/InterruptorAgent.ts:80</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L76">src/common/InterruptorAgent.ts:76</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="filter_name" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>filter_<wbr/>name</span><a href="#filter_name" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">filter_<wbr/>name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L69">src/arch/LinuxArm64InterruptorAgent.ts:69</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L99">src/arch/LinuxArm64InterruptorAgent.ts:99</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="filter_num" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>filter_<wbr/>num</span><a href="#filter_num" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">filter_<wbr/>num<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L70">src/arch/LinuxArm64InterruptorAgent.ts:70</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L100">src/arch/LinuxArm64InterruptorAgent.ts:100</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="followFork" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>follow<wbr/>Fork</span><a href="#followFork" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">follow<wbr/>Fork<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#followFork">followFork</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L74">src/common/InterruptorAgent.ts:74</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L70">src/common/InterruptorAgent.ts:70</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="followThread" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>follow<wbr/>Thread</span><a href="#followThread" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">follow<wbr/>Thread<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#followThread">followThread</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L76">src/common/InterruptorAgent.ts:76</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L72">src/common/InterruptorAgent.ts:72</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="hook" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>hook</span><a href="#hook" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">hook<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = ...</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#hook">hook</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L108">src/common/InterruptorAgent.ts:108</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L104">src/common/InterruptorAgent.ts:104</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="hvc_hk" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>hvc_<wbr/>hk</span><a href="#hvc_hk" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">hvc_<wbr/>hk<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = {}</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L73">src/arch/LinuxArm64InterruptorAgent.ts:73</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L103">src/arch/LinuxArm64InterruptorAgent.ts:103</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="include" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>include</span><a href="#include" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">include<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = null</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#include">include</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L82">src/common/InterruptorAgent.ts:82</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L78">src/common/InterruptorAgent.ts:78</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="interrupts" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>interrupts</span><a href="#interrupts" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">interrupts<span class="tsd-signature-symbol">:</span> <a href="../interfaces/src_common_InterruptorAgent.InterruptSignatureMap.html" class="tsd-signature-type" data-tsd-kind="Interface">InterruptSignatureMap</a></div><aside class="tsd-sources">
+<div class="tsd-signature">interrupts<span class="tsd-signature-symbol">:</span> <a href="../interfaces/src_common_Types.InterruptSignatureMap.html" class="tsd-signature-type" data-tsd-kind="Interface">InterruptSignatureMap</a></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#interrupts">interrupts</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L86">src/common/InterruptorAgent.ts:86</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L82">src/common/InterruptorAgent.ts:82</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="irq_hk" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>irq_<wbr/>hk</span><a href="#irq_hk" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">irq_<wbr/>hk<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = {}</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L75">src/arch/LinuxArm64InterruptorAgent.ts:75</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L105">src/arch/LinuxArm64InterruptorAgent.ts:105</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="loadCtr" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>load<wbr/>Ctr</span><a href="#loadCtr" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">load<wbr/>Ctr<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L67">src/arch/LinuxArm64InterruptorAgent.ts:67</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L97">src/arch/LinuxArm64InterruptorAgent.ts:97</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="moduleFilter" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>module<wbr/>Filter</span><a href="#moduleFilter" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">module<wbr/>Filter<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = null</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#moduleFilter">moduleFilter</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L84">src/common/InterruptorAgent.ts:84</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L80">src/common/InterruptorAgent.ts:80</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="modules" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>modules</span><a href="#modules" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">modules<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Module</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#modules">modules</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L59">src/common/InterruptorAgent.ts:59</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L55">src/common/InterruptorAgent.ts:55</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="onStart" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>on<wbr/>Start</span><a href="#onStart" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">on<wbr/>Start<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = ...</span></div>
@@ -230,13 +241,13 @@ A callback function executed when the modules specified in &quot;startOnLoad&quo
 <h3>Field</h3></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#onStart">onStart</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L106">src/common/InterruptorAgent.ts:106</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L102">src/common/InterruptorAgent.ts:102</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="output" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>output</span><a href="#output" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">output<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = ...</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#output">output</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L114">src/common/InterruptorAgent.ts:114</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L110">src/common/InterruptorAgent.ts:110</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="pid" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>pid</span><a href="#pid" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">pid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div>
@@ -245,59 +256,59 @@ A callback function executed when the modules specified in &quot;startOnLoad&quo
 <h3>Field</h3></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#pid">pid</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L68">src/common/InterruptorAgent.ts:68</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L64">src/common/InterruptorAgent.ts:64</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="ranges" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>ranges</span><a href="#ranges" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">ranges<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = ...</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#ranges">ranges</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L58">src/common/InterruptorAgent.ts:58</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L54">src/common/InterruptorAgent.ts:54</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="scope" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>scope</span><a href="#scope" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">scope<span class="tsd-signature-symbol">:</span> <a href="../interfaces/src_common_InterruptorAgent.ScopeMap.html" class="tsd-signature-type" data-tsd-kind="Interface">ScopeMap</a></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#scope">scope</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L88">src/common/InterruptorAgent.ts:88</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L84">src/common/InterruptorAgent.ts:84</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="smc_hk" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>smc_<wbr/>hk</span><a href="#smc_hk" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">smc_<wbr/>hk<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = {}</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L74">src/arch/LinuxArm64InterruptorAgent.ts:74</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L104">src/arch/LinuxArm64InterruptorAgent.ts:104</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class"><a id="svc_hk" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>svc_<wbr/>hk</span><a href="#svc_hk" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">svc_<wbr/>hk<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = {}</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L72">src/arch/LinuxArm64InterruptorAgent.ts:72</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L102">src/arch/LinuxArm64InterruptorAgent.ts:102</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="tid" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>tid</span><a href="#tid" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">tid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = -1</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#tid">tid</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L70">src/common/InterruptorAgent.ts:70</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L66">src/common/InterruptorAgent.ts:66</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="types" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>types</span><a href="#types" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">types<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = {}</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#types">types</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L97">src/common/InterruptorAgent.ts:97</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L93">src/common/InterruptorAgent.ts:93</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="uid" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>uid</span><a href="#uid" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">uid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#uid">uid</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L56">src/common/InterruptorAgent.ts:56</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L50">src/common/InterruptorAgent.ts:50</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="FLAVOR_DXC" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>FLAVOR_<wbr/>DXC</span><a href="#FLAVOR_DXC" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">FLAVOR_<wbr/>DXC<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;dxc&quot;</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#FLAVOR_DXC">FLAVOR_DXC</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L53">src/common/InterruptorAgent.ts:53</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L47">src/common/InterruptorAgent.ts:47</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a id="FLAVOR_STRACE" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>FLAVOR_<wbr/>STRACE</span><a href="#FLAVOR_STRACE" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">FLAVOR_<wbr/>STRACE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = &quot;strace&quot;</span></div><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#FLAVOR_STRACE">FLAVOR_STRACE</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L54">src/common/InterruptorAgent.ts:54</a></li></ul></aside></section></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L48">src/common/InterruptorAgent.ts:48</a></li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected tsd-is-inherited"><a id="_setupDelegateFilters" class="tsd-anchor"></a>
@@ -315,7 +326,7 @@ A callback function executed when the modules specified in &quot;startOnLoad&quo
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#_setupDelegateFilters">_setupDelegateFilters</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L227">src/common/InterruptorAgent.ts:227</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L223">src/common/InterruptorAgent.ts:223</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="configure" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>configure</span><a href="#configure" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -328,7 +339,7 @@ A callback function executed when the modules specified in &quot;startOnLoad&quo
 <h5>pConfig: <span class="tsd-signature-type">any</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L94">src/arch/LinuxArm64InterruptorAgent.ts:94</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L112">src/arch/LinuxArm64InterruptorAgent.ts:112</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="formatLogLine" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>format<wbr/>Log<wbr/>Line</span><a href="#formatLogLine" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -347,7 +358,7 @@ A callback function executed when the modules specified in &quot;startOnLoad&quo
 <h5>pSysNum: <span class="tsd-signature-type">number</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L501">src/arch/LinuxArm64InterruptorAgent.ts:501</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L535">src/arch/LinuxArm64InterruptorAgent.ts:535</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a id="getModuleList" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Module<wbr/>List</span><a href="#getModuleList" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
@@ -368,7 +379,7 @@ A callback function executed when the modules specified in &quot;startOnLoad&quo
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#getModuleList">getModuleList</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L238">src/common/InterruptorAgent.ts:238</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L234">src/common/InterruptorAgent.ts:234</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="getSyscallError" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Syscall<wbr/>Error</span><a href="#getSyscallError" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -390,7 +401,7 @@ list of error code.</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L515">src/arch/LinuxArm64InterruptorAgent.ts:515</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L549">src/arch/LinuxArm64InterruptorAgent.ts:549</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a id="getSyscallList" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Syscall<wbr/>List</span><a href="#getSyscallList" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
@@ -409,7 +420,7 @@ list of error code.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#getSyscallList">getSyscallList</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L277">src/common/InterruptorAgent.ts:277</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L273">src/common/InterruptorAgent.ts:273</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a id="isTrackCoverage" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>is<wbr/>Track<wbr/>Coverage</span><a href="#isTrackCoverage" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
@@ -423,7 +434,7 @@ list of error code.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#isTrackCoverage">isTrackCoverage</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L470">src/common/InterruptorAgent.ts:470</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L466">src/common/InterruptorAgent.ts:466</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="locatePC" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>locatePC</span><a href="#locatePC" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -436,7 +447,7 @@ list of error code.</p>
 <h5>pContext: <span class="tsd-signature-type">any</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L138">src/arch/LinuxArm64InterruptorAgent.ts:138</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L156">src/arch/LinuxArm64InterruptorAgent.ts:156</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="onHypervisorCall" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>on<wbr/>Hypervisor<wbr/>Call</span><a href="#onHypervisorCall" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -451,7 +462,7 @@ list of error code.</p>
 <h5>pHooks: <span class="tsd-signature-type">any</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L127">src/arch/LinuxArm64InterruptorAgent.ts:127</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L145">src/arch/LinuxArm64InterruptorAgent.ts:145</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="onSupervisorCall" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>on<wbr/>Supervisor<wbr/>Call</span><a href="#onSupervisorCall" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -466,7 +477,7 @@ list of error code.</p>
 <h5>pHooks: <span class="tsd-signature-type">any</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L118">src/arch/LinuxArm64InterruptorAgent.ts:118</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L136">src/arch/LinuxArm64InterruptorAgent.ts:136</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a id="parseOptions" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>parse<wbr/>Options</span><a href="#parseOptions" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
@@ -485,11 +496,11 @@ list of error code.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#parseOptions">parseOptions</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L159">src/common/InterruptorAgent.ts:159</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L155">src/common/InterruptorAgent.ts:155</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="parseRawArgs" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>parse<wbr/>Raw<wbr/>Args</span><a href="#parseRawArgs" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-<li class="tsd-signature tsd-anchor-link" id="parseRawArgs.parseRawArgs-1">parse<wbr/>Raw<wbr/>Args<span class="tsd-signature-symbol">(</span>pContext<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, pFormat<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, pIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#parseRawArgs.parseRawArgs-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="parseRawArgs.parseRawArgs-1">parse<wbr/>Raw<wbr/>Args<span class="tsd-signature-symbol">(</span>pContext<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, pFormat<span class="tsd-signature-symbol">: </span><a href="../types/src_common_Types.SyscallParamSignature.html" class="tsd-signature-type" data-tsd-kind="Type alias">SyscallParamSignature</a>, pIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#parseRawArgs.parseRawArgs-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -497,12 +508,12 @@ list of error code.</p>
 <li>
 <h5>pContext: <span class="tsd-signature-type">any</span></h5></li>
 <li>
-<h5>pFormat: <span class="tsd-signature-type">any</span></h5></li>
+<h5>pFormat: <a href="../types/src_common_Types.SyscallParamSignature.html" class="tsd-signature-type" data-tsd-kind="Type alias">SyscallParamSignature</a></h5></li>
 <li>
 <h5>pIndex: <span class="tsd-signature-type">number</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L450">src/arch/LinuxArm64InterruptorAgent.ts:450</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L476">src/arch/LinuxArm64InterruptorAgent.ts:476</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="parseStruct" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>parse<wbr/>Struct</span><a href="#parseStruct" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -525,12 +536,14 @@ list of error code.</p>
 <h5>pAlign: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L276">src/arch/LinuxArm64InterruptorAgent.ts:276</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L300">src/arch/LinuxArm64InterruptorAgent.ts:300</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="parseValue" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>parse<wbr/>Value</span><a href="#parseValue" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-<li class="tsd-signature tsd-anchor-link" id="parseValue.parseValue-1">parse<wbr/>Value<span class="tsd-signature-symbol">(</span>pContext<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, pValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, pFormat<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, pIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#parseValue.parseValue-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="parseValue.parseValue-1">parse<wbr/>Value<span class="tsd-signature-symbol">(</span>pContext<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, pValue<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, pFormat<span class="tsd-signature-symbol">: </span><a href="../types/src_common_Types.SyscallParamSignature.html" class="tsd-signature-type" data-tsd-kind="Type alias">SyscallParamSignature</a>, pIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#parseValue.parseValue-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>This method is called</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
@@ -539,12 +552,12 @@ list of error code.</p>
 <li>
 <h5>pValue: <span class="tsd-signature-type">any</span></h5></li>
 <li>
-<h5>pFormat: <span class="tsd-signature-type">any</span></h5></li>
+<h5>pFormat: <a href="../types/src_common_Types.SyscallParamSignature.html" class="tsd-signature-type" data-tsd-kind="Type alias">SyscallParamSignature</a></h5></li>
 <li>
 <h5>pIndex: <span class="tsd-signature-type">number</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L334">src/arch/LinuxArm64InterruptorAgent.ts:334</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L359">src/arch/LinuxArm64InterruptorAgent.ts:359</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a id="prepareScope" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>prepare<wbr/>Scope</span><a href="#prepareScope" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
@@ -555,18 +568,19 @@ list of error code.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#prepareScope">prepareScope</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L213">src/common/InterruptorAgent.ts:213</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L209">src/common/InterruptorAgent.ts:209</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="printStats" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>print<wbr/>Stats</span><a href="#printStats" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 <li class="tsd-signature tsd-anchor-link" id="printStats.printStats-1">print<wbr/>Stats<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#printStats.printStats-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>To print statistics about implementation</p>
-</div>
+<div class="tsd-comment tsd-typography"><p>To print some statistic about coverage for linux/arm64</p>
+
+<h3>Method</h3></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Overrides <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#printStats">printStats</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L741">src/arch/LinuxArm64InterruptorAgent.ts:741</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L792">src/arch/LinuxArm64InterruptorAgent.ts:792</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a id="processBbsCoverage" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>process<wbr/>Bbs<wbr/>Coverage</span><a href="#processBbsCoverage" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
@@ -582,7 +596,7 @@ list of error code.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#processBbsCoverage">processBbsCoverage</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L479">src/common/InterruptorAgent.ts:479</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L475">src/common/InterruptorAgent.ts:475</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="setupBuiltinHook" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>setup<wbr/>Builtin<wbr/>Hook</span><a href="#setupBuiltinHook" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -590,7 +604,7 @@ list of error code.</p>
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L134">src/arch/LinuxArm64InterruptorAgent.ts:134</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L152">src/arch/LinuxArm64InterruptorAgent.ts:152</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a id="start" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>start</span><a href="#start" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
@@ -606,14 +620,13 @@ list of error code.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#start">start</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/common/InterruptorAgent.ts#L508">src/common/InterruptorAgent.ts:508</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/common/InterruptorAgent.ts#L504">src/common/InterruptorAgent.ts:504</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="startOnLoad" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>start<wbr/>On<wbr/>Load</span><a href="#startOnLoad" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 <li class="tsd-signature tsd-anchor-link" id="startOnLoad.startOnLoad-1">start<wbr/>On<wbr/>Load<span class="tsd-signature-symbol">(</span>pModuleRegExp<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">RegExp</span>, pOptions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#startOnLoad.startOnLoad-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>To start tracing when a specifc module is loaded, and an optional condition verified</p>
-<p>Must be overridden by architecture specific interruptors</p>
+<div class="tsd-comment tsd-typography"><p>This method setup linker hook to</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -625,43 +638,77 @@ list of error code.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <p>Overrides <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#startOnLoad">startOnLoad</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L170">src/arch/LinuxArm64InterruptorAgent.ts:170</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L194">src/arch/LinuxArm64InterruptorAgent.ts:194</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="trace" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>trace</span><a href="#trace" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 <li class="tsd-signature tsd-anchor-link" id="trace.trace-1">trace<span class="tsd-signature-symbol">(</span>pStalkerInterator<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">StalkerX86Iterator</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">StalkerArmIterator</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">StalkerThumbIterator</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">StalkerArm64Iterator</span>, pInstruction<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, pExtra<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#trace.trace-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>To setup &quot;trace&quot; hook is the current instruction is an interruption or follow immediately one.</p>
+<p>This function is called by Stalker&#39;s event listener for each instruction</p>
+
+<h3>Method</h3></div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>pStalkerInterator: <span class="tsd-signature-type">StalkerX86Iterator</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">StalkerArmIterator</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">StalkerThumbIterator</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">StalkerArm64Iterator</span></h5></li>
+<h5>pStalkerInterator: <span class="tsd-signature-type">StalkerX86Iterator</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">StalkerArmIterator</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">StalkerThumbIterator</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">StalkerArm64Iterator</span></h5>
+<div class="tsd-comment tsd-typography"><p>The stalker iterator</p>
+</div></li>
 <li>
-<h5>pInstruction: <span class="tsd-signature-type">any</span></h5></li>
+<h5>pInstruction: <span class="tsd-signature-type">any</span></h5>
+<div class="tsd-comment tsd-typography"><p>The current instruction</p>
+</div></li>
 <li>
-<h5>pExtra: <span class="tsd-signature-type">any</span></h5></li></ul></div>
+<h5>pExtra: <span class="tsd-signature-type">any</span></h5>
+<div class="tsd-comment tsd-typography"><p>Some extra options</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><aside class="tsd-sources">
 <p>Overrides <a href="src_common_InterruptorAgent.InterruptorAgent.html">InterruptorAgent</a>.<a href="src_common_InterruptorAgent.InterruptorAgent.html#trace">trace</a></p>
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L646">src/arch/LinuxArm64InterruptorAgent.ts:646</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L693">src/arch/LinuxArm64InterruptorAgent.ts:693</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="traceSyscall" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>trace<wbr/>Syscall</span><a href="#traceSyscall" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
 <li class="tsd-signature tsd-anchor-link" id="traceSyscall.traceSyscall-1">trace<wbr/>Syscall<span class="tsd-signature-symbol">(</span>pContext<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, pHookCfg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#traceSyscall.traceSyscall-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Method executed before the syscall interruption
-if the syscall is not excluded</p>
-</div>
+if the syscall is not excluded.</p>
+<p>This method is responsible of argument parsing, and work as described below :</p>
+<ul>
+<li><ol>
+<li>read syscall number from a register according to @link{ SyscallCallingConvention }</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>find description of corresponding syscall</li>
+</ol>
+</li>
+<li><ol start="3">
+<li>save the type of return value from description into hook context</li>
+</ol>
+</li>
+<li><ol start="4">
+<li></li>
+</ol>
+</li>
+</ul>
+
+<h3>Method</h3></div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5>pContext: <span class="tsd-signature-type">any</span></h5></li>
+<h5>pContext: <span class="tsd-signature-type">any</span></h5>
+<div class="tsd-comment tsd-typography"><p>CPU context</p>
+</div></li>
 <li>
-<h5>pHookCfg: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = null</span></h5></li></ul></div>
+<h5>pHookCfg: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = null</span></h5>
+<div class="tsd-comment tsd-typography"><p>Addition hook configuration</p>
+</div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L466">src/arch/LinuxArm64InterruptorAgent.ts:466</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L500">src/arch/LinuxArm64InterruptorAgent.ts:500</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class"><a id="traceSyscallRet" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>trace<wbr/>Syscall<wbr/>Ret</span><a href="#traceSyscallRet" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -686,7 +733,7 @@ if the syscall is not excluded</p>
 <h5>pHookCfg: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = null</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/5379596/src/arch/LinuxArm64InterruptorAgent.ts#L538">src/arch/LinuxArm64InterruptorAgent.ts:538</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/298738b/src/arch/LinuxArm64InterruptorAgent.ts#L572">src/arch/LinuxArm64InterruptorAgent.ts:572</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
@@ -727,7 +774,6 @@ if the syscall is not excluded</p>
 <li class="tsd-kind-module"><a href="../modules/src_common_Utils.html">src/common/<wbr/>Utils</a></li>
 <li class="tsd-kind-module"><a href="../modules/src_kernelapi_LinuxArm64Flags.html">src/kernelapi/<wbr/>Linux<wbr/>Arm64<wbr/>Flags</a></li>
 <li class="tsd-kind-module"><a href="../modules/src_kernelapi_LinuxX64Flags.html">src/kernelapi/<wbr/>Linux<wbr/>X64<wbr/>Flags</a></li>
-<li class="tsd-kind-module"><a href="../modules/src_syscalls_ISyscall.html">src/syscalls/ISyscall</a></li>
 <li class="tsd-kind-module"><a href="../modules/src_syscalls_LinuxAarch32Syscalls.html">src/syscalls/<wbr/>Linux<wbr/>Aarch32<wbr/>Syscalls</a></li>
 <li class="tsd-kind-module"><a href="../modules/src_syscalls_LinuxAarch64Syscalls.html">src/syscalls/<wbr/>Linux<wbr/>Aarch64<wbr/>Syscalls</a></li>
 <li class="tsd-kind-module"><a href="../modules/src_syscalls_LinuxX64Syscalls.html">src/syscalls/<wbr/>Linux<wbr/>X64<wbr/>Syscalls</a></li>
@@ -740,6 +786,7 @@ if the syscall is not excluded</p>
 <li class="tsd-kind-constructor tsd-parent-kind-class"><a href="src_arch_LinuxArm64InterruptorAgent.LinuxArm64InterruptorAgent.html#constructor" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-512-path"></use><use href="#icon-512-text"></use></svg>constructor</a></li>
 <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="src_arch_LinuxArm64InterruptorAgent.LinuxArm64InterruptorAgent.html#_do_ft" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>_do_<wbr/>ft</a></li>
 <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="src_arch_LinuxArm64InterruptorAgent.LinuxArm64InterruptorAgent.html#_tids" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>_tids</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="src_arch_LinuxArm64InterruptorAgent.LinuxArm64InterruptorAgent.html#catchBRKPT" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>catchBRKPT</a></li>
 <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="src_arch_LinuxArm64InterruptorAgent.LinuxArm64InterruptorAgent.html#coverage" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>coverage?</a></li>
 <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="src_arch_LinuxArm64InterruptorAgent.LinuxArm64InterruptorAgent.html#debug" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>debug</a></li>
 <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="src_arch_LinuxArm64InterruptorAgent.LinuxArm64InterruptorAgent.html#emulator" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>emulator</a></li>

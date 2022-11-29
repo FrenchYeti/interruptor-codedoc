@@ -53,6 +53,7 @@
 <a href="#case-a--using-interruptor-package" id="case-a--using-interruptor-package" style="color: inherit; text-decoration: none;">
   <h3>Case A : Using Interruptor package</h3>
 </a>
+<p><a href="https://www.npmjs.com/package/@reversense/interruptor">See it on NPM</a></p>
 <p><strong>It is the BEST and more reliable way to use Interruptor</strong> </p>
 <p>This method require Frida &gt;= 16.x is you write your hook in Typescript.</p>
 <p>Basically, create a new folder for your hooks or move into your workspace :</p>
@@ -105,7 +106,7 @@ and do:</p>
 <pre><code><span class="hl-0">cp</span><span class="hl-1"> ./</span><span class="hl-0">examples</span><span class="hl-1">/</span><span class="hl-0">android</span><span class="hl-1">/</span><span class="hl-0">simple_trace</span><span class="hl-1">.</span><span class="hl-0">ts</span><span class="hl-1"> .</span>
 </code></pre>
 <p>And finally :</p>
-<pre><code><span class="hl-0">frida</span><span class="hl-1"> -</span><span class="hl-2">U</span><span class="hl-1"> -</span><span class="hl-0">l</span><span class="hl-1"> ./</span><span class="hl-0">simple_strace</span><span class="hl-1">.</span><span class="hl-0">ts</span><span class="hl-1"> -</span><span class="hl-0">f</span><span class="hl-1"> &lt;</span><span class="hl-2">PACKAGE</span><span class="hl-1">&gt; </span>
+<pre><code><span class="hl-0">frida</span><span class="hl-1"> -</span><span class="hl-2">U</span><span class="hl-1"> -</span><span class="hl-0">l</span><span class="hl-1"> ./</span><span class="hl-0">simple_strace</span><span class="hl-1">.</span><span class="hl-0">arm64</span><span class="hl-1">.</span><span class="hl-0">ts</span><span class="hl-1"> -</span><span class="hl-0">f</span><span class="hl-1"> &lt;</span><span class="hl-2">PACKAGE</span><span class="hl-1">&gt; </span>
 </code></pre>
 
 <a href="#2-examples" id="2-examples" style="color: inherit; text-decoration: none;">
@@ -281,7 +282,6 @@ It works even if there is not link between traces processes.</p>
 <li class="tsd-kind-module"><a href="modules/src_common_Utils.html">src/common/<wbr/>Utils</a></li>
 <li class="tsd-kind-module"><a href="modules/src_kernelapi_LinuxArm64Flags.html">src/kernelapi/<wbr/>Linux<wbr/>Arm64<wbr/>Flags</a></li>
 <li class="tsd-kind-module"><a href="modules/src_kernelapi_LinuxX64Flags.html">src/kernelapi/<wbr/>Linux<wbr/>X64<wbr/>Flags</a></li>
-<li class="tsd-kind-module"><a href="modules/src_syscalls_ISyscall.html">src/syscalls/ISyscall</a></li>
 <li class="tsd-kind-module"><a href="modules/src_syscalls_LinuxAarch32Syscalls.html">src/syscalls/<wbr/>Linux<wbr/>Aarch32<wbr/>Syscalls</a></li>
 <li class="tsd-kind-module"><a href="modules/src_syscalls_LinuxAarch64Syscalls.html">src/syscalls/<wbr/>Linux<wbr/>Aarch64<wbr/>Syscalls</a></li>
 <li class="tsd-kind-module"><a href="modules/src_syscalls_LinuxX64Syscalls.html">src/syscalls/<wbr/>Linux<wbr/>X64<wbr/>Syscalls</a></li>
