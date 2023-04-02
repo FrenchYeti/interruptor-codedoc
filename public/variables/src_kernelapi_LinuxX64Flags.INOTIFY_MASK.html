@@ -18,7 +18,7 @@
 <h1>Variable INOTIFY_MASK<code class="tsd-tag ts-flagConst">Const</code> </h1></div>
 <div class="tsd-signature">INOTIFY_<wbr/>MASK<span class="tsd-signature-symbol">:</span> <a href="../interfaces/src_kernelapi_Types.KernelEnum.html" class="tsd-signature-type" data-tsd-kind="Interface">KernelEnum</a><span class="tsd-signature-symbol"> = ...</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/8bf8c78/src/kernelapi/LinuxX64Flags.ts#L50">src/kernelapi/LinuxX64Flags.ts:50</a></li></ul></aside></div>
+<li>Defined in <a href="https://github.com/frenchyeti/interruptor/blob/1648d18/src/kernelapi/LinuxX64Flags.ts#L50">src/kernelapi/LinuxX64Flags.ts:50</a></li></ul></aside></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 <div class="tsd-navigation settings">
 <details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
@@ -49,6 +49,10 @@
 <li class="tsd-kind-module"><a href="../modules/src_arch_LinuxArm64InterruptorFactory.html">src/arch/<wbr/>Linux<wbr/>Arm64<wbr/>Interruptor<wbr/>Factory</a></li>
 <li class="tsd-kind-module"><a href="../modules/src_arch_LinuxX64InterruptorAgent.html">src/arch/<wbr/>Linux<wbr/>X64<wbr/>Interruptor<wbr/>Agent</a></li>
 <li class="tsd-kind-module"><a href="../modules/src_arch_LinuxX64InterruptorFactory.html">src/arch/<wbr/>Linux<wbr/>X64<wbr/>Interruptor<wbr/>Factory</a></li>
+<li class="tsd-kind-module"><a href="../modules/src_arch_MacosArm64InterruptorAgent.html">src/arch/<wbr/>Macos<wbr/>Arm64<wbr/>Interruptor<wbr/>Agent</a></li>
+<li class="tsd-kind-module"><a href="../modules/src_arch_MacosArm64InterruptorFactory.html">src/arch/<wbr/>Macos<wbr/>Arm64<wbr/>Interruptor<wbr/>Factory</a></li>
+<li class="tsd-kind-module"><a href="../modules/src_arch_MacosX64InterruptorAgent.html">src/arch/<wbr/>Macos<wbr/>X64<wbr/>Interruptor<wbr/>Agent</a></li>
+<li class="tsd-kind-module"><a href="../modules/src_arch_MacosX64InterruptorFactory.html">src/arch/<wbr/>Macos<wbr/>X64<wbr/>Interruptor<wbr/>Factory</a></li>
 <li class="tsd-kind-module"><a href="../modules/src_common_AbstractInterruptorFactory.html">src/common/<wbr/>Abstract<wbr/>Interruptor<wbr/>Factory</a></li>
 <li class="tsd-kind-module"><a href="../modules/src_common_DebugUtils.html">src/common/<wbr/>Debug<wbr/>Utils</a></li>
 <li class="tsd-kind-module"><a href="../modules/src_common_InterruptorAgent.html">src/common/<wbr/>Interruptor<wbr/>Agent</a></li>
@@ -59,11 +63,14 @@
 <li class="tsd-kind-module"><a href="../modules/src_common_Utils.html">src/common/<wbr/>Utils</a></li>
 <li class="tsd-kind-module"><a href="../modules/src_kernelapi_LinuxArm64Flags.html">src/kernelapi/<wbr/>Linux<wbr/>Arm64<wbr/>Flags</a></li>
 <li class="current tsd-kind-module"><a href="../modules/src_kernelapi_LinuxX64Flags.html">src/kernelapi/<wbr/>Linux<wbr/>X64<wbr/>Flags</a></li>
+<li class="tsd-kind-module"><a href="../modules/src_kernelapi_MacosArm64Flags.html">src/kernelapi/<wbr/>Macos<wbr/>Arm64<wbr/>Flags</a></li>
+<li class="tsd-kind-module"><a href="../modules/src_kernelapi_MacosX64Flags.html">src/kernelapi/<wbr/>Macos<wbr/>X64<wbr/>Flags</a></li>
 <li class="tsd-kind-module"><a href="../modules/src_kernelapi_Types.html">src/kernelapi/<wbr/>Types</a></li>
 <li class="tsd-kind-module"><a href="../modules/src_syscalls_LinuxAarch32Syscalls.html">src/syscalls/<wbr/>Linux<wbr/>Aarch32<wbr/>Syscalls</a></li>
 <li class="tsd-kind-module"><a href="../modules/src_syscalls_LinuxAarch64Syscalls.html">src/syscalls/<wbr/>Linux<wbr/>Aarch64<wbr/>Syscalls</a></li>
 <li class="tsd-kind-module"><a href="../modules/src_syscalls_LinuxX64Syscalls.html">src/syscalls/<wbr/>Linux<wbr/>X64<wbr/>Syscalls</a></li>
-<li class="tsd-kind-module"><a href="../modules/src_syscalls_MacosX64Syscalls.html">src/syscalls/<wbr/>Macos<wbr/>X64<wbr/>Syscalls</a></li>
+<li class="tsd-kind-module"><a href="../modules/src_syscalls_MacosAarch64Syscalls.html">src/syscalls/<wbr/>Macos<wbr/>Aarch64<wbr/>Syscalls</a></li>
+<li class="tsd-kind-module"><a href="../modules/src_syscalls_MacosX64Syscall.html">src/syscalls/<wbr/>Macos<wbr/>X64<wbr/>Syscall</a></li>
 <li class="tsd-kind-module"><a href="../modules/src_utilities_Coverage.html">src/utilities/<wbr/>Coverage</a></li>
 <li class="tsd-kind-module"><a href="../modules/src_utilities_IStringIndex.html">src/utilities/IString<wbr/>Index</a></li></ul></li></ul></div></details></nav>
 <nav class="tsd-navigation secondary menu-sticky">
@@ -80,6 +87,7 @@
 <li class="tsd-kind-variable tsd-parent-kind-module"><a href="src_kernelapi_LinuxX64Flags.FALLOC.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg>FALLOC</a></li>
 <li class="tsd-kind-variable tsd-parent-kind-module"><a href="src_kernelapi_LinuxX64Flags.FMODE.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg>FMODE</a></li>
 <li class="tsd-kind-variable tsd-parent-kind-module"><a href="src_kernelapi_LinuxX64Flags.FUTEX.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg>FUTEX</a></li>
+<li class="tsd-kind-variable tsd-parent-kind-module"><a href="src_kernelapi_LinuxX64Flags.F_.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg>F_</a></li>
 <li class="tsd-kind-variable tsd-parent-kind-module"><a href="src_kernelapi_LinuxX64Flags.I.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg>I</a></li>
 <li class="tsd-kind-variable tsd-parent-kind-module"><a href="src_kernelapi_LinuxX64Flags.INOTIFY_FLAGS.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg>INOTIFY_<wbr/>FLAGS</a></li>
 <li class="current tsd-kind-variable tsd-parent-kind-module"><a href="src_kernelapi_LinuxX64Flags.INOTIFY_MASK.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg>INOTIFY_<wbr/>MASK</a></li>
@@ -111,9 +119,9 @@
 <li class="tsd-kind-variable tsd-parent-kind-module"><a href="src_kernelapi_LinuxX64Flags.RUSAGE.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg>RUSAGE</a></li>
 <li class="tsd-kind-variable tsd-parent-kind-module"><a href="src_kernelapi_LinuxX64Flags.RWF.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg>RWF</a></li>
 <li class="tsd-kind-variable tsd-parent-kind-module"><a href="src_kernelapi_LinuxX64Flags.S.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg>S</a></li>
-<li class="tsd-kind-variable tsd-parent-kind-module"><a href="src_kernelapi_LinuxX64Flags.SCHED.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg>SCHED</a></li>
+<li class="tsd-kind-variable tsd-parent-kind-module"><a href="src_kernelapi_LinuxX64Flags.SCHED_.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg>SCHED_</a></li>
 <li class="tsd-kind-variable tsd-parent-kind-module"><a href="src_kernelapi_LinuxX64Flags.SECCOMP.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg>SECCOMP</a></li>
-<li class="tsd-kind-variable tsd-parent-kind-module"><a href="src_kernelapi_LinuxX64Flags.SEEK.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg>SEEK</a></li>
+<li class="tsd-kind-variable tsd-parent-kind-module"><a href="src_kernelapi_LinuxX64Flags.SEEK_.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg>SEEK_</a></li>
 <li class="tsd-kind-variable tsd-parent-kind-module"><a href="src_kernelapi_LinuxX64Flags.SIG_FLAG.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg>SIG_<wbr/>FLAG</a></li>
 <li class="tsd-kind-variable tsd-parent-kind-module"><a href="src_kernelapi_LinuxX64Flags.SOCK_.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg>SOCK_</a></li>
 <li class="tsd-kind-variable tsd-parent-kind-module"><a href="src_kernelapi_LinuxX64Flags.SPLICE.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-32-path"></use><use href="#icon-32-text"></use></svg>SPLICE</a></li>
